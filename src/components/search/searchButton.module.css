@@ -1,0 +1,21 @@
+.buttoN {
+  background-color: inherit;
+  padding: 0.5rem 2rem;
+  border-radius: 16px;
+  font-size: 1.1rem;
+  color: #442e37;
+  border: 2px solid #d93e43;
+}
+
+.buttoN:hover {
+  background-color: #374940;
+  color: #e5d38c;
+  filter: drop-shadow(1px 1px 5px #e5d38c);
+  transition: all 0.45s;
+}
+
+@media (max-width: 767px) {
+  .buttoN {
+    padding: 0.5rem 1rem;
+  }
+}

@@ -1,0 +1,132 @@
+.container {
+  display: flex;
+  align-items: center;
+
+  height: 150px;
+}
+
+.container button {
+  background-color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  border: 2px solid #37474f;
+}
+
+.search {
+  max-width: 800px;
+
+  margin: 0 auto;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 10px 10px 10px 16px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+
+  border-radius: 15px;
+}
+
+.search span {
+  display: flex;
+  gap: 1rem;
+  position: absolute;
+  top: 50%;
+  left: 75%;
+
+  transform: translate(-50%, -50%);
+}
+
+.button {
+  background-color: inherit;
+  color: #37474f;
+  border: none;
+}
+.label {
+  cursor: pointer;
+}
+
+.textField {
+  padding: 0 10px;
+  flex-grow: 5;
+  height: 60px;
+  max-width: calc(100% - 100px - 20px);
+  border: none;
+
+  font-size: 0.75rem;
+  line-height: 1.5;
+  cursor: text;
+}
+
+.textField::placeholder {
+  color: gray;
+}
+
+.textField:focus {
+  outline: none;
+}
+
+.error {
+  position: absolute;
+  right: 50%;
+  bottom: 5px;
+  color: red;
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 700;
+}
+
+@media (min-width: 767px) {
+  .textField {
+    margin: 0 5px;
+    font-size: 1.25rem;
+    margin: 0 20px;
+    height: 20px;
+  }
+
+  .search {
+    padding: 10px 10px 10px 30px;
+  }
+  .error {
+    right: 120px;
+    top: 50%;
+    transform: translateY(-50%);
+    bottom: unset;
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    margin-top: 100px;
+  }
+
+  .arrow {
+    position: fixed;
+    top: 70px;
+    left: 50%;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    transform: translate(-50%, -50%);
+  }
+  .search span {
+    top: 50%;
+    left: 70%;
+  }
+
+  .textField {
+    height: 20px;
+  }
+}
+
+@media (max-width: 800px) {
+  .search span {
+    top: 50%;
+    left: 60%;
+  }
+  container button {
+    padding: 0.3rem;
+  }
+}
