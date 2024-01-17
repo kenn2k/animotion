@@ -5,9 +5,7 @@ import { LocalAnime } from "../../types/types";
 import Category from "./Category";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
-import KeyboardDoubleArrowLeftIcon from "@mui/icons-material/KeyboardDoubleArrowLeft";
-import KeyboardDoubleArrowRightIcon from "@mui/icons-material/KeyboardDoubleArrowRight";
-import { useNavigate } from "react-router-dom";
+
 export interface Anime extends LocalAnime {}
 
 const AnimeList = () => {
@@ -15,7 +13,7 @@ const AnimeList = () => {
   const [selectedGenre, setSelectedGenre] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState<string>("");
   const [nav, setNavbar] = useState(false);
-  const navigate = useNavigate();
+
   const navHandler = () => {
     setNavbar(!nav);
   };
@@ -71,19 +69,6 @@ const AnimeList = () => {
           }
         >
           <div className={styles.form}>
-            <span>
-              <button
-                className={styles.button}
-                onClick={() => {
-                  navigate(-1);
-                }}
-              >
-                <KeyboardDoubleArrowLeftIcon />
-              </button>
-              <button className={styles.button}>
-                <KeyboardDoubleArrowRightIcon />
-              </button>
-            </span>
             <div className={styles.mobile}>
               <input
                 type="text"

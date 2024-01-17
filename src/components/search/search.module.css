@@ -6,6 +6,7 @@
 }
 
 .container button {
+  display: flex;
   background-color: white;
   border: none;
   cursor: pointer;

@@ -3,8 +3,9 @@ import axios from "axios";
 import Button from "./SearchButton";
 import styles from "./search.module.css";
 import { TypeContext } from "../Context/Context";
-import SearchIcon from "@mui/icons-material/Search";
+
 import { useNavigate } from "react-router-dom";
+import KeyboardDoubleArrowLeftIcon from "@mui/icons-material/KeyboardDoubleArrowLeft";
 
 const Search = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -30,9 +31,15 @@ const Search = () => {
   return (
     <div className={styles.container}>
       <div className={styles.search}>
-        <label htmlFor="search">
-          <SearchIcon />
-        </label>
+        <button
+          className={styles.button}
+          onClick={() => {
+            navigate(-1);
+          }}
+        >
+          <KeyboardDoubleArrowLeftIcon />
+        </button>
+        <label htmlFor="search"></label>
         <input
           className={styles.textField}
           type="text"
