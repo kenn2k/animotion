@@ -1,3 +1,7 @@
+You can find you need anime by category, and if you liked the description, you can find more detailed information
+
+
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
