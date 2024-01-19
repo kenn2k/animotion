@@ -9,7 +9,7 @@ import CloseIcon from "@mui/icons-material/Close";
 export interface Anime extends LocalAnime {}
 
 const AnimeList = () => {
-  const [animeList, setAnimeData] = useState<Anime[]>([]);
+  const [animeList, setAnimeList] = useState<Anime[]>([]);
   const [selectedGenre, setSelectedGenre] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState<string>("");
   const [nav, setNavbar] = useState(false);
@@ -18,7 +18,7 @@ const AnimeList = () => {
     setNavbar(!nav);
   };
   useEffect(() => {
-    const fetchData = async () => {
+    const fetchData = () => {
       try {
         let url = "https://kitsu.io/api/edge/anime";
 
@@ -31,10 +31,9 @@ const AnimeList = () => {
             ? `&filter[text]=${searchQuery}`
             : `?filter[text]=${searchQuery}`;
         }
-
-        const response = await axios.get(url);
-        const animeList = response.data.data;
-        setAnimeData(animeList);
+        axios.get(url).then((response) => {
+          setAnimeList(response.data.data);
+        });
       } catch (error) {
         console.error("Error fetching anime data:", error);
       }
