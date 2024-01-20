@@ -10,8 +10,7 @@ const Main = () => {
     return null;
   }
   return (
-    <div className={styles.content}>
-      <div className={styles.arrow}></div>
+    <div className={styles.main__content}>
       <MainBar />
       <SideBar />
     </div>

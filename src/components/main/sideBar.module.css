@@ -1,12 +1,12 @@
 /** SideBar component  **/
 
-.sidebar {
+.sideBar__sidebar {
   flex: 1;
   padding: 0.5rem;
   color: #e5d38c;
 }
 
-.content {
+.sideBar__content {
   background-color: #374940;
   padding: 0.5rem;
   border-radius: 16px;
@@ -15,23 +15,23 @@
   gap: 1rem;
 }
 
-.content h2 {
+.sideBar__content h2 {
   text-align: center;
   font-size: 2rem;
   margin-bottom: 1rem;
 }
 
-.details {
+.sideBar__details {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
 
 @media (max-width: 800px) {
-  .content {
+  .sideBar__content {
     gap: 0.5rem;
     font-size: 0.7rem;
   }
-  .content h2 {
+  .sideBar__content h2 {
     font-size: 1.2rem;
   }
 }

@@ -1,5 +1,5 @@
 /** MainBar component  **/
-.mainBar {
+.mainBar__mainBar {
   flex: 3;
   padding: 0.5rem;
   color: #e5d38c;
@@ -9,7 +9,7 @@
   height: 100%;
 }
 
-.picture {
+.mainBar__picture {
   display: flex;
   gap: 3rem;
   padding: 0.5rem;
@@ -18,30 +18,30 @@
   background-color: #374940;
   border-radius: 16px;
 }
-.picture h3 {
+.mainBar__picture h3 {
   display: flex;
   align-items: center;
   font-size: 2rem;
 }
 
-.picture img {
+.mainBar__picture img {
   height: auto;
   width: 100px;
   border-radius: 16px;
   filter: drop-shadow(1px 1px 5px #e5d38c);
 }
 
-.info {
+.mainBar__info {
   padding: 0.5rem;
   border-radius: 16px;
   background-color: #374940;
 }
 
 @media (max-width: 800px) {
-  .info p {
+  .mainBar__info p {
     font-size: 0.7rem;
   }
-  .picture h3 {
+  .mainBar__picture h3 {
     font-size: 1.5rem;
   }
 }

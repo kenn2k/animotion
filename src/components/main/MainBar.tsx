@@ -8,12 +8,13 @@ const MainBar = () => {
   const synopsis = animeData?.attributes.synopsis;
   const cannon = animeData?.attributes.canonicalTitle;
   return (
-    <div className={styles.mainBar}>
-      <div className={styles.picture}>
+    <div className={styles.mainBar__mainBar}>
+      <div className={styles.mainBar__picture}>
         <img src={image} alt="no image" />
-        <h3 className={styles.title}>{cannon}</h3>
+        <h3 className={styles.mainBar__title}>{cannon}</h3>
       </div>
-      <div className={styles.info}>
+
+      <div className={styles.mainBar__info}>
         <p>{synopsis}</p>
       </div>
     </div>

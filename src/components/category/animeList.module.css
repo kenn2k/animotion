@@ -1,4 +1,4 @@
-.container {
+.list__container {
   max-width: 1000px;
   border-radius: 16px;
   padding: 0.5rem;
@@ -9,14 +9,14 @@
   flex-wrap: wrap;
 }
 
-.form {
+.list__form {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.form input {
+.list__form input {
   height: 50px;
   font-size: 1rem;
   border-radius: 16px;
@@ -26,7 +26,7 @@
   outline: none;
 }
 
-.form span {
+.list__form span {
   display: flex;
   text-align: center;
   gap: 1rem;
@@ -35,7 +35,7 @@
   border-radius: 16px;
 }
 
-.form button {
+.list__form button {
   color: #e5d38c;
   background: #3c5d4c;
   border: #3c5d4c;
@@ -43,7 +43,7 @@
 
   cursor: pointer;
 }
-.mobile {
+.list__mobile {
   display: flex;
   gap: 1rem;
   background-color: #2e3331;
@@ -51,18 +51,18 @@
   border-radius: 16px;
 }
 
-.mobile button {
+.list__mobile button {
   border: none;
   cursor: pointer;
   border-radius: 10px;
 }
 
-.container input::placeholder {
+.list__container input::placeholder {
   font-size: 0.7rem;
   outline: none;
 }
 
-.container button:hover {
+.list__container button:hover {
   filter: drop-shadow(1px 1px 5px #e5d38c);
   transition: all 0.45s;
 }
@@ -71,22 +71,22 @@
 }
 
 @media (max-width: 800px) {
-  .mobile {
+  .list__mobile {
     display: flex;
     flex-direction: column;
     gap: 0.7rem;
   }
 
-  .mobile button {
+  .list__mobile button {
     background-color: #374940;
     color: #e5d38c;
   }
-  .container span {
+  .list__container span {
     width: 50%;
     margin: 0 auto;
   }
 
-  .container span {
+  .list__container span {
     display: flex;
     align-items: center;
     justify-content: center;

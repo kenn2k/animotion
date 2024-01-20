@@ -5,18 +5,18 @@ interface ICategory extends Pick<LocalAnime, "attributes" | "id"> {}
 
 const Category: React.FC<{ animeList: ICategory[] }> = ({ animeList }) => {
   return (
-    <div className={styles.content}>
+    <div className={styles.category__content}>
       {animeList.map((anime) => (
         <li key={anime.id}>
-          <div className={styles.mainBar}>
-            <div className={styles.picture}>
+          <div className={styles.category__mainBar}>
+            <div className={styles.category__picture}>
               <img src={anime.attributes.posterImage.original} alt="gfhsfgh" />
 
-              <h3 className={styles.title}>
+              <h3 className={styles.category__title}>
                 {anime.attributes.canonicalTitle}
               </h3>
             </div>
-            <div className={styles.info}>
+            <div className={styles.category__info}>
               <p>{anime.attributes.synopsis}</p>
             </div>
           </div>

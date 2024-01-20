@@ -16,45 +16,47 @@ const SideBar = () => {
   const receivedEndDate = endDate ? data.format(new Date(endDate)) : "";
 
   return (
-    <div className={styles.sidebar}>
-      <div className={styles.page}>
-        <div className={styles.content}>
+    <div className={styles.sideBar__sidebar}>
+      <div className={styles.sideBar__page}>
+        <div className={styles.sideBar__content}>
           <h2>Anime Details</h2>
-          <div className={styles.details}>
-            <div className={styles.lang}>English</div>
-            <div className={styles.ApiLang}>
+          <div className={styles.sideBar__details}>
+            <div className={styles.sideBar__lang}>English</div>
+            <div className={styles.sideBar__ApiLang}>
               {animeData?.attributes.titles.en_jp}
             </div>
           </div>
-          <div className={styles.details}>
-            <div className={styles.lang}>Japanese</div>
-            <div className={styles.ApiLang}>
+          <div className={styles.sideBar__details}>
+            <div className={styles.sideBar__lang}>Japanese</div>
+            <div className={styles.sideBar__ApiLang}>
               {animeData?.attributes.titles.ja_jp}
             </div>
           </div>
-          <div className={styles.details}>
-            <div className={styles.lang}>Synonyms</div>
-            <div className={styles.ApiLang}>
+          <div className={styles.sideBar__details}>
+            <div className={styles.sideBar__lang}>Synonyms</div>
+            <div className={styles.sideBar__ApiLang}>
               {animeData?.attributes.abbreviatedTitles}
             </div>
           </div>
-          <div className={styles.details}>
-            <div className={styles.lang}>Type</div>
-            <div className={styles.ApiLang}>{animeData?.type}</div>
+          <div className={styles.sideBar__details}>
+            <div className={styles.sideBar__lang}>Type</div>
+            <div className={styles.sideBar__ApiLang}>{animeData?.type}</div>
           </div>
-          <div className={styles.details}>
-            <div className={styles.lang}>Episodes</div>
-            <div className={styles.ApiLang}>
+          <div className={styles.sideBar__details}>
+            <div className={styles.sideBar__lang}>Episodes</div>
+            <div className={styles.sideBar__ApiLang}>
               {animeData?.attributes.episodeCount}
             </div>
           </div>
-          <div className={styles.details}>
-            <div className={styles.lang}>Status</div>
-            <div className={styles.ApiLang}>{animeData?.attributes.status}</div>
+          <div className={styles.sideBar__details}>
+            <div className={styles.sideBar__lang}>Status</div>
+            <div className={styles.sideBar__ApiLang}>
+              {animeData?.attributes.status}
+            </div>
           </div>
-          <div className={styles.details}>
-            <div className={styles.lang}>Aired</div>
-            <div className={styles.ApiLang}>
+          <div className={styles.sideBar__details}>
+            <div className={styles.sideBar__lang}>Aired</div>
+            <div className={styles.sideBar__ApiLang}>
               {receivedStartDate} to {receivedEndDate}
             </div>
           </div>

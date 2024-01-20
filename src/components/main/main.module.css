@@ -1,4 +1,4 @@
-.content {
+.main__content {
   max-width: 1200px;
   height: calc(100vh - 300px);
   display: flex;
@@ -9,30 +9,10 @@
   position: relative;
 }
 
-.arrow {
-  position: fixed;
-  top: 14%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
-  color: #e5d38c;
-}
-.arrow button {
-  background-color: #3c5d4c;
-  color: #e5d38c;
-  border: #3c5d4c;
-  border-radius: 16px;
-  cursor: pointer;
-}
-
 @media (max-width: 800px) {
-  .content {
+  .main__content {
     display: flex;
     flex-direction: column;
     height: 100%;
-  }
-
-  .arrow {
-    top: 27%;
   }
 }
